@@ -522,10 +522,10 @@ class Frame {
                                     $style->padding_bottom),
                              $cb["h"]);
 
-    return array(0 => $x, "x" => $x,
-                 1 => $y, "y" => $y,
-                 2 => $w, "w" => $w,
-                 3 => $h, "h" => $h);
+    return array(0 => (float) $x, "x" => (float) $x,
+                 1 => (float) $y, "y" => (float) $y,
+                 2 => (float) $w, "w" => (float) $w,
+                 3 => (float) $h, "h" => (float) $h);
   }
 
   /**
