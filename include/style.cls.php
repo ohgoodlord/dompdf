@@ -487,7 +487,7 @@ class Style {
       }
 
       if ( ($i = mb_strpos($l, "px"))  !== false ) {
-        $dpi = $this->_stylesheet->get_dompdf()->get_option("dpi");
+        $dpi = floatval($this->_stylesheet->get_dompdf()->get_option("dpi"));
         $ret += ( mb_substr($l, 0, $i)  * 72 ) / $dpi;
         continue;
       }
