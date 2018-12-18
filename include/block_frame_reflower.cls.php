@@ -397,7 +397,7 @@ class Block_Frame_Reflower extends Frame_Reflower {
   protected function _text_align() {
     $style = $this->_frame->get_style();
     $w = $this->_frame->get_containing_block("w");
-    $width = $style->length_in_pt($style->width, $w);
+    $width = (float) $style->length_in_pt($style->width, $w);
     
     switch ($style->text_align) {
       default:
