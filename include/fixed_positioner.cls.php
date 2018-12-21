@@ -37,10 +37,10 @@ class Fixed_Positioner extends Positioner {
     $height = (float) $style->length_in_pt($style->height, $initialcb["h"]);
     $width  = (float) $style->length_in_pt($style->width,  $initialcb["w"]);
     
-    $top    = (float) $style->length_in_pt($style->top,    $initialcb["h"]);
+    $top    = $style->length_in_pt($style->top,    $initialcb["h"]);
     $right  = (float) $style->length_in_pt($style->right,  $initialcb["w"]);
     $bottom = (float) $style->length_in_pt($style->bottom, $initialcb["h"]);
-    $left   = (float) $style->length_in_pt($style->left,   $initialcb["w"]);
+    $left   = $style->length_in_pt($style->left,   $initialcb["w"]);
 
     $y = $margin_top;
     if ( isset($top) ) {
